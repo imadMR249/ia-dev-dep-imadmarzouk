@@ -4,8 +4,8 @@
 
 | | Membre A | Membre B |
 | --- | --- | --- |
-| Nom | *à compléter* | *à compléter* |
-| Compte GitHub | *à compléter* | *à compléter* |
+| Nom | Abdelkader Lotfi Riyane | Imad Marzouk |
+| Compte GitHub | @Rayanelo17 | @Imad-Marzouk |
 
 **Dépôt** : *adresse du dépôt GitHub, à compléter*
 
@@ -79,14 +79,17 @@ git config --global user.name
 **Obtenu** :
 
 ```text
-À compléter
+-3.11 *         Python 3.11.9 (tags/v3.11.9:8d12c13, Apr  2 2024, 10:02:22)
+Python 3.11.9
+git version 2.44.0.windows.1
+Imad Marzouk
 ```
 
-- [ ] Conforme
+- [x] Conforme
 
 **Commentaire** :
 
-> À compléter.
+> Python 3.11 est bien installé sur le poste du membre B. Git est configuré avec le nom « Imad Marzouk », différent du membre A. L'environnement est prêt pour cloner le dépôt.
 
 ![Poste du membre B](captures/tp0-poste-membre-b.png)
 
@@ -212,14 +215,20 @@ python scripts/check_setup.py
 **Obtenu** :
 
 ```text
-À compléter
+[OK] Python 3.11.9
+[OK] Git 2.44.0
+[OK] Dossiers : app, data, docs, models, scripts, tests, ui
+[OK] .env absent ou vide
+[OK] Dépôt Git initialisé
+[OK] Fiches de cadrage : 3 fiches trouvées
+Diagnostic : 0 erreur(s), 0 avertissement(s)
 ```
 
-- [ ] Conforme
+- [x] Conforme
 
 **Commentaire** :
 
-> À compléter.
+> Le membre B a cloné le dépôt depuis le compte du membre A, créé son environnement virtuel et installé les dépendances. Le diagnostic affiche 0 erreur, ce qui confirme que l'environnement est correctement configuré sur les deux postes.
 
 ![T4 : diagnostic du membre B](captures/tp1-t4-check-setup-b.png)
 
@@ -239,14 +248,16 @@ python -m pytest tests/test_git_history.py -q
 **Obtenu** :
 
 ```text
-À compléter
+     2	Abdelkader Lotfi Riyane
+     1	Imad Marzouk
+3 passed
 ```
 
-- [ ] Conforme
+- [x] Conforme
 
 **Commentaire** :
 
-> À compléter.
+> Le membre B a tiré la dernière version (`git pull`), ajouté son nom dans README.md, puis commité et poussé. `git shortlog` liste bien deux auteurs distincts. Les 3 tests de `test_git_history.py` passent, confirmant que l'historique contient au moins deux contributeurs différents.
 
 ![T5 : deux auteurs](captures/tp1-t5-shortlog.png)
 
@@ -440,10 +451,13 @@ python -m pytest -q
 **Obtenu** :
 
 ```text
-À compléter
+290 avis écrits (145 positifs, 145 négatifs)
+Vocabulaire : 316 termes
+F1 macro sur le jeu de test : 0.879 (seuil 0.85)
+42 passed
 ```
 
-- [ ] Conforme
+- [x] Conforme
 
 ![TP2 : poste du membre B](captures/tp2-membre-b.png)
 
@@ -631,10 +645,13 @@ python -m pytest -q
 **Obtenu** :
 
 ```text
-À compléter
+290 avis écrits (145 positifs, 145 négatifs)
+Vocabulaire : 316 termes
+F1 macro sur le jeu de test : 0.879 (seuil 0.85)
+48 passed
 ```
 
-- [ ] Conforme
+- [x] Conforme
 
 ![TP3 : poste du membre B](captures/tp3-membre-b.png)
 
@@ -842,10 +859,12 @@ python -m pytest -q
 **Obtenu** :
 
 ```text
-À compléter
+Vocabulaire : 316 termes
+F1 macro sur le jeu de test : 0.879 (seuil 0.85)
+53 passed, 1 skipped
 ```
 
-- [ ] Conforme
+- [x] Conforme
 
 ![TP4 : poste du membre B](captures/tp4-membre-b.png)
 
@@ -1030,10 +1049,13 @@ streamlit run ui/app.py
 **Obtenu** :
 
 ```text
-À compléter
+Vocabulaire : 316 termes
+F1 macro sur le jeu de test : 0.879 (seuil 0.85)
+65 passed, 1 skipped
+API prête : tfidf-logreg (TP2, models/sentiment.joblib)
 ```
 
-- [ ] Conforme
+- [x] Conforme
 
 ![TP5 : poste du membre B](captures/tp5-membre-b.png)
 
@@ -1231,10 +1253,11 @@ sentiment --version
 **Obtenu** :
 
 ```text
-À compléter
+65 passed, 1 skipped
+sentiment-app 0.6.0
 ```
 
-- [ ] Conforme
+- [x] Conforme
 
 ![TP6 : poste du membre B](captures/tp6-membre-b.png)
 
@@ -1256,38 +1279,38 @@ Une ligne par blocage : le message exact, ce qui le provoquait, ce qui l'a régl
 
 | TP | Ce qu'a fait le membre A | Ce qu'a fait le membre B |
 | --- | --- | --- |
-| TP1 | | |
-| TP2 | | |
-| TP3 | | |
-| TP4 | | |
-| TP5 | | |
-| TP6 | | |
+| TP1 | Créé le dépôt, configuré l'environnement, rédigé les fiches de cadrage, premier push GitHub | Cloné le dépôt, configuré son environnement, commité dans README.md, vérifié les tests |
+| TP2 | Appliqué le kit TP2, généré le jeu de démonstration, entraîné et évalué le modèle, push et CI | Tiré les modifications, regénéré le jeu de démonstration, réentraîné le modèle, vérifié 42 passed |
+| TP3 | Appliqué le kit TP3, implémenté l'API FastAPI, vérifié les routes T15 à T20, push CI | Tiré les modifications, réentraîné le modèle de démonstration, vérifié 48 passed |
+| TP4 | Appliqué le kit TP4, corrigé le schéma Pydantic, ajouté l'abstention, couverture 95 %, CI | Tiré les modifications, installé requirements-dev.txt, installé pre-commit, vérifié les tests |
+| TP5 | Appliqué le kit TP5, implémenté l'interface Streamlit, testé les verdicts et erreurs, push CI | Tiré les modifications, réentraîné le modèle, vérifié les tests, lancé l'interface Streamlit |
+| TP6 | Appliqué le kit TP6, réorganisé le paquet, construit la roue, testé hors dépôt, push et tag | Tiré les modifications, installé en mode éditable, vérifié les tests et la commande sentiment |
 
 ## Le bilan
 
 **TP1** :
 
-> À compléter.
+> Le TP1 a permis de mettre en place l'environnement de travail collaboratif. Le membre B a cloné le dépôt depuis le compte du membre A, configuré son environnement Python 3.11 et vérifié que le diagnostic affichait 0 erreur. Les deux membres ont chacun commité dans le dépôt, ce que `git shortlog` confirme. Les 38 tests passent et la CI est verte.
 
 **TP2** :
 
-> À compléter.
+> Le TP2 a introduit l'entraînement d'un modèle de classification de sentiment. Le membre B a reproduit l'intégralité de la chaîne sur son poste : génération du jeu de démonstration (290 avis), entraînement (F1 = 0,879), et validation des 42 tests. Les erreurs portent toutes sur des avis mitigés où le modèle suit la première partie de l'avis sans percevoir le retournement de sens.
 
 **TP3** :
 
-> À compléter.
+> Le TP3 a exposé le modèle via une API FastAPI. Le membre B a tiré les modifications, réentraîné le modèle de démonstration et vérifié que les 48 tests passaient. L'API répond correctement aux routes `/health` et `/predict`, refuse les entrées invalides avec un code 422 et refuse de démarrer sans modèle.
 
 **TP4** :
 
-> À compléter.
+> Le TP4 a renforcé la qualité du code par des tests de propriété (hypothesis), l'abstention sur les avis ambigus, la couverture à 95 % et les outils statiques ruff et mypy. Le membre B a installé les outils de développement, le crochet pre-commit, et vérifié que tous les tests passaient sur son poste.
 
 **TP5** :
 
-> À compléter.
+> Le TP5 a ajouté une interface Streamlit permettant d'analyser un avis ou un fichier CSV. Le membre B a tiré les modifications, réentraîné le modèle, vérifié les tests et lancé l'interface. La page affiche correctement « API prête » et les verdicts POSITIVE, NEGATIVE et INDETERMINE avec leurs scores de confiance.
 
 **TP6** :
 
-> À compléter.
+> Le TP6 a transformé le projet en paquet Python installable. Le membre B a tiré les modifications, installé le paquet en mode éditable (`pip install -e .`), vérifié que les tests passaient et que la commande `sentiment --version` affichait bien `sentiment-app 0.6.0`. Le paquet peut désormais être distribué sous forme de roue sans inclure les données ni le modèle.
 
 ---
 
